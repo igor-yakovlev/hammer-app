@@ -5,13 +5,20 @@ import moment from 'moment';
 import UserView from './UserView';
 import AvatarStatus from 'components/shared-components/AvatarStatus';
 import userData from "assets/data/user-list.data.json";
+import UserService from 'services/UserService';
 
 export class UserList extends Component {
 
 	state = {
-		users: userData,
+		users: [],
 		userProfileVisible: false,
-		selectedUser: null
+		selectedUser: null,
+		isLoading: true,
+	}
+
+	componentDidMount() {
+		UserService.getUsers()
+		.then(data => this.setState({users: data, isLoading: false}))	
 	}
 
 	deleteUser = userId => {
@@ -56,28 +63,31 @@ export class UserList extends Component {
 				},
 			},
 			{
-				title: 'Role',
-				dataIndex: 'role',
+				title: 'Company',
+				dataIndex: 'company',
+				render: company => (
+					<span>{company.name}</span>
+				),
 				sorter: {
-					compare: (a, b) => a.role.length - b.role.length,
+					compare: (a, b) => {
+						a = a.company.name.toLowerCase();
+  						b = b.company.name.toLowerCase();
+						return a > b ? -1 : b > a ? 1 : 0;
+					},
 				},
 			},
 			{
-				title: 'Last online',
-				dataIndex: 'lastOnline',
-				render: date => (
-					<span>{moment.unix(date).format("MM/DD/YYYY")} </span>
-				),
-				sorter: (a, b) => moment(a.lastOnline).unix() - moment(b.lastOnline).unix()
-			},
-			{
-				title: 'Status',
-				dataIndex: 'status',
-				render: status => (
-					<Tag className ="text-capitalize" color={status === 'active'? 'cyan' : 'red'}>{status}</Tag>
+				title: 'City',
+				dataIndex: 'address',
+				render: address => (
+					<span>{address.city}</span>
 				),
 				sorter: {
-					compare: (a, b) => a.status.length - b.status.length,
+					compare: (a, b) => {
+						a = a.address.city.toLowerCase();
+  						b = b.address.city.toLowerCase();
+						return a > b ? -1 : b > a ? 1 : 0;
+					},
 				},
 			},
 			{
@@ -97,7 +107,7 @@ export class UserList extends Component {
 		];
 		return (
 			<Card bodyStyle={{'padding': '0px'}}>
-				<Table columns={tableColumns} dataSource={users} rowKey='id' />
+				<Table loading={this.state.isLoading} columns={tableColumns} dataSource={users} rowKey='id' />
 				<UserView data={selectedUser} visible={userProfileVisible} close={()=> {this.closeUserProfile()}}/>
 			</Card>
 		)
