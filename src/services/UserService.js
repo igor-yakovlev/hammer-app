@@ -11,4 +11,13 @@ UserService.getUsers = function (params) {
   })
 }
 
+
+UserService.getUsersById = function (id, params) {
+  return fetch({
+    url: `/users/${id}`,
+    method: 'get',
+    params
+  })
+}
+
 export default UserService
