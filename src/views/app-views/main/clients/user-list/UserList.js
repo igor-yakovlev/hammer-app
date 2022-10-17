@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { Card, Table, Tag, Tooltip, message, Button } from 'antd';
+import { Card, Table, Tooltip, message, Button } from 'antd';
 import { EyeOutlined, DeleteOutlined } from '@ant-design/icons';
-import moment from 'moment';
 import UserView from './UserView';
 import AvatarStatus from 'components/shared-components/AvatarStatus';
-import userData from "assets/data/user-list.data.json";
 import UserService from 'services/UserService';
 import { withRouter } from "react-router";
 

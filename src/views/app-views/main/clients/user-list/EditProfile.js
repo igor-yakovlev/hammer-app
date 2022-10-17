@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Avatar, Button, Input, DatePicker, Row, Col, message, Upload, Spin } from 'antd';
+import { Form, Avatar, Button, Input, Row, Col, message, Upload } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { ROW_GUTTER } from 'constants/ThemeConstant';
 import Flex from 'components/shared-components/Flex';
@@ -20,7 +20,6 @@ export class EditProfile extends Component {
 		UserService.getUsersById(this.props.match.params.id)
 		.then(data => this.setState({user: data, isLoading: false}))	
 	}
-
 
 
 	getBase64(img, callback) {
@@ -46,6 +45,7 @@ export class EditProfile extends Component {
 					company: values.company,
 				})
 				message.success({ content: 'Done!', key, duration: 2 });
+				this.props.history.push(`/app/main/clients/list`);
 			}, 1000);
 		};
 	
@@ -82,7 +82,7 @@ export class EditProfile extends Component {
 		if (this.state.isLoading) return  <Loading/>
 		return (
 			<>
-				{/* <Flex alignItems="center" mobileFlex={false} className="text-center text-md-left">
+				<Flex alignItems="center" mobileFlex={false} className="text-center text-md-left">
 					<Avatar size={90} src={avatarUrl} icon={<UserOutlined />}/>
 					<div className="ml-md-3 mt-md-0 mt-3">
 						<Upload onChange={onUploadAvater} showUploadList={false} action={this.avatarEndpoint}>
@@ -90,7 +90,7 @@ export class EditProfile extends Component {
 						</Upload>
 						<Button className="ml-2" onClick={onRemoveAvater}>Remove</Button>
 					</div>
-				</Flex> */}
+				</Flex>
 				<div className="mt-4">
 					<Form
 						name="basicInformation"
