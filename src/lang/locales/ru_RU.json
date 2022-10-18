@@ -1,8 +1,9 @@
 {
 	"home": "Основные",
-	
+
 	"sidenav.main": "Основные",
 	"sidenav.main.dashboard": "Дашборд",
+	"sidenav.main.planner": "Планировщик",
 	"sidenav.main.catalog": "Каталог",
 	"sidenav.main.catalog.goods": "Товары",
 	"sidenav.main.catalog.categorys": "Категории",

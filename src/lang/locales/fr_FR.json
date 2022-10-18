@@ -4,6 +4,7 @@
 
 	"sidenav.main": "Principal",
 	"sidenav.main.dashboard": "Tableau de bord",
+	"sidenav.main.planner": "Planificatrice",
 	"sidenav.main.catalog": "Catalogue",
 	"sidenav.main.catalog.goods": "Des biens",
 	"sidenav.main.catalog.categorys": "Catégories",

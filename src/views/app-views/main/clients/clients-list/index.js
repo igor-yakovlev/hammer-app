@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch, } from 'react-router-dom';
-import UserList from './UserList';
+import ClientsList from './ClientsList';
 import EditProfile from './EditProfile';
 
 
@@ -8,7 +8,7 @@ const UserListContent = ({match}) => {
 	return (
 	  <Switch>
 		<Route path={`${match.url}/:id`} component={EditProfile} />
-		<Route path={`${match.url}`} component={UserList} />
+		<Route path={`${match.url}`} component={ClientsList} />
 	  </Switch>
 	)
   }

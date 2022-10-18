@@ -10,7 +10,8 @@ import {
   MailOutlined,
   SettingOutlined,
   MobileOutlined,
-  FileTextOutlined
+  FileTextOutlined,
+  BranchesOutlined
 } from '@ant-design/icons';
 import {
   APP_PREFIX_PATH
@@ -31,7 +32,15 @@ const mainBoardNavTree = [
       icon: DashboardOutlined,
       breadcrumb: false,
       submenu: []
-    }, 
+    },
+    {
+      key: 'main-planner',
+      path: `${APP_PREFIX_PATH}/main/planner`,
+      title: 'sidenav.main.planner',
+      icon: BranchesOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
     {
       key: 'main-catalog',
       path: `${APP_PREFIX_PATH}/main/catalog`,
@@ -98,7 +107,7 @@ const mainBoardNavTree = [
         },
         {
           key: 'clients-group',
-          path: `${APP_PREFIX_PATH}/clients/group`,
+          path: `${APP_PREFIX_PATH}/main/clients/group`,
           title: 'sidenav.main.clients.group',
           icon: '',
           breadcrumb: true,
@@ -108,7 +117,7 @@ const mainBoardNavTree = [
     },
     {
       key: 'main-banners',
-      path: `${APP_PREFIX_PATH}/banners`,
+      path: `${APP_PREFIX_PATH}/main/banners`,
       title: 'sidenav.main.banners',
       icon: PictureOutlined,
       breadcrumb: false,
@@ -116,7 +125,7 @@ const mainBoardNavTree = [
     },
     {
       key: 'main-promocodes',
-      path: `${APP_PREFIX_PATH}/promocodes`,
+      path: `${APP_PREFIX_PATH}/main/promocodes`,
       title: 'sidenav.main.promocodes',
       icon: GiftOutlined,
       breadcrumb: false,
@@ -124,14 +133,14 @@ const mainBoardNavTree = [
     },
     {
       key: 'main-offpicks',
-      path: `${APP_PREFIX_PATH}/offpicks`,
+      path: `${APP_PREFIX_PATH}/main/offpicks`,
       title: 'sidenav.main.offpicks',
       icon: ShopOutlined,
       breadcrumb: false,
       submenu: [
         {
           key: 'offpicks-addresses',
-          path: `${APP_PREFIX_PATH}/offpicks/addresses`,
+          path: `${APP_PREFIX_PATH}/main/offpicks/addresses`,
           title: 'sidenav.main.offpicks.addresses',
           icon: '',
           breadcrumb: true,
@@ -139,7 +148,7 @@ const mainBoardNavTree = [
         },
         {
           key: 'offpicks-geozones',
-          path: `${APP_PREFIX_PATH}/offpicks/geozones`,
+          path: `${APP_PREFIX_PATH}/main/offpicks/geozones`,
           title: 'sidenav.main.offpicks.geozones',
           icon: '',
           breadcrumb: true,
@@ -149,7 +158,7 @@ const mainBoardNavTree = [
     },
     {
       key: 'main-employees',
-      path: `${APP_PREFIX_PATH}/employees`,
+      path: `${APP_PREFIX_PATH}/main/employees`,
       title: 'sidenav.main.employees',
       icon: UsergroupAddOutlined,
       breadcrumb: false,
@@ -157,7 +166,7 @@ const mainBoardNavTree = [
     },
     {
       key: 'main-mailingLists',
-      path: `${APP_PREFIX_PATH}/mailingLists`,
+      path: `${APP_PREFIX_PATH}/main/mailingLists`,
       title: 'sidenav.main.mailingLists',
       icon: MailOutlined,
       breadcrumb: false,
@@ -190,7 +199,7 @@ const systemsBoardNavTree = [
         icon: MobileOutlined,
         breadcrumb: false,
         submenu: []
-      }, 
+      },
       {
         key: 'systems-logs',
         path: `${APP_PREFIX_PATH}/systems/logs`,
@@ -198,9 +207,9 @@ const systemsBoardNavTree = [
         icon: FileTextOutlined,
         breadcrumb: false,
         submenu: []
-      }, 
+      },
     ]
-  }  
+  }
 ]
 
 const navigationConfig = [

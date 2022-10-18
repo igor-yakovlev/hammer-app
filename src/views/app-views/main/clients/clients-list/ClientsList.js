@@ -1,23 +1,20 @@
 import React, { Component } from 'react'
 import { Card, Table, Tooltip, message, Button } from 'antd';
-import { EyeOutlined, DeleteOutlined } from '@ant-design/icons';
-import UserView from './UserView';
+import {EyeOutlined, DeleteOutlined, UserOutlined} from '@ant-design/icons';
 import AvatarStatus from 'components/shared-components/AvatarStatus';
 import UserService from 'services/UserService';
 import { withRouter } from "react-router";
 
-export class UserList extends Component {
+export class ClientsList extends Component {
 
 	state = {
 		users: [],
-		userProfileVisible: false,
-		selectedUser: null,
 		isLoading: true,
 	}
 
 	componentDidMount() {
 		UserService.getUsers()
-		.then(data => this.setState({users: data, isLoading: false}))	
+		.then(data => this.setState({users: data, isLoading: false}))
 	}
 
 	deleteUser = userId => {
@@ -31,20 +28,6 @@ export class UserList extends Component {
         this.props.history.push(`/app/main/clients/list/${param}`);
     }
 
-	showUserProfile = userInfo => {
-		this.setState({
-			userProfileVisible: true,
-			selectedUser: userInfo
-		});
-	};
-	
-	closeUserProfile = () => {
-		this.setState({
-			userProfileVisible: false,
-			selectedUser: null
-    });
-	}
-
 	render() {
 		const { users, userProfileVisible, selectedUser } = this.state;
 
@@ -54,7 +37,7 @@ export class UserList extends Component {
 				dataIndex: 'name',
 				render: (_, record) => (
 					<div className="d-flex">
-						<AvatarStatus src={record.img} name={record.name} subTitle={record.email}/>
+						<AvatarStatus icon={<UserOutlined />} src={record.img} name={record.name} subTitle={record.email}/>
 					</div>
 				),
 				sorter: {
@@ -111,12 +94,11 @@ export class UserList extends Component {
 		return (
 			<Card bodyStyle={{'padding': '0px'}}>
 				<Table loading={this.state.isLoading} columns={tableColumns} dataSource={users} rowKey='id' />
-				<UserView data={selectedUser} visible={userProfileVisible} close={()=> {this.closeUserProfile()}}/>
 			</Card>
 		)
 	}
 }
 
-const UserListWithRouter = withRouter(UserList);
+const ClientsListWithRouter = withRouter(ClientsList);
 
-export default UserListWithRouter
+export default ClientsListWithRouter
