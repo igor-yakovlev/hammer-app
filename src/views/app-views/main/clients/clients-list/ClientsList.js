@@ -29,7 +29,7 @@ export class ClientsList extends Component {
     }
 
     render() {
-        const {users, userProfileVisible, selectedUser} = this.state;
+        const { users } = this.state;
 
         const tableColumns = [
             {

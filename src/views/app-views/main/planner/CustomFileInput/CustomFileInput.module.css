@@ -1,0 +1,29 @@
+.input__file {
+  display: none;
+}
+
+.button {
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  border: 1px solid rgb(237, 242, 249);
+  box-shadow: rgb(0 0 0 / 2%) 0px 2px 0px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  user-select: none;
+  touch-action: manipulation;
+  height: 40px;
+  padding: 8.5px 1.25rem;
+  font-size: 14px;
+  border-radius: 0.625rem;
+  color: rgb(69, 85, 96);
+  background: rgb(255, 255, 255);
+}
+
+.button:hover {
+  background: rgb(237,237,237);
+}
+
