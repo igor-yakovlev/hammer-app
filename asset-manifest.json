@@ -13,8 +13,8 @@
     "static/js/5.446ad581.chunk.js": "/hammer-app/static/js/5.446ad581.chunk.js",
     "static/js/5.446ad581.chunk.js.map": "/hammer-app/static/js/5.446ad581.chunk.js.map",
     "main.css": "/hammer-app/static/css/main.a4d80b0b.chunk.css",
-    "main.js": "/hammer-app/static/js/main.95c85ba3.chunk.js",
-    "main.js.map": "/hammer-app/static/js/main.95c85ba3.chunk.js.map",
+    "main.js": "/hammer-app/static/js/main.b8939f5d.chunk.js",
+    "main.js.map": "/hammer-app/static/js/main.b8939f5d.chunk.js.map",
     "runtime-main.js": "/hammer-app/static/js/runtime-main.ef7ab8f7.js",
     "runtime-main.js.map": "/hammer-app/static/js/runtime-main.ef7ab8f7.js.map",
     "static/js/8.0b24bcc8.chunk.js": "/hammer-app/static/js/8.0b24bcc8.chunk.js",
@@ -84,6 +84,6 @@
     "static/js/runtime-main.ef7ab8f7.js",
     "static/js/8.0b24bcc8.chunk.js",
     "static/css/main.a4d80b0b.chunk.css",
-    "static/js/main.95c85ba3.chunk.js"
+    "static/js/main.b8939f5d.chunk.js"
   ]
 }
