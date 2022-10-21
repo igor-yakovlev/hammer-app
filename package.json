@@ -1,7 +1,11 @@
 {
   "name": "emilus",
   "version": "2.0.1",
-  "private": true,
+  "engines": {
+    "node": "13.7.0"
+  },
+  "private": false,
+  "homepage": "http://igor-yakovlev.github.io/hammer-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -61,6 +65,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -86,6 +92,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.4",
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-debug": "^4.0.0",

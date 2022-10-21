@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Проект: Emilus
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание
+Доработка SPA Emilus и добавление  нового инструмента "Планировщик", необходимого для создания 2-d схем помещений
 
-## Available Scripts
+### Технологии используемые в проекте
+1. Библиотека [React](https://ru.reactjs.org/).
+2. [Redux](https://redux.js.org/).
+3. Набор инструментов [Ant design](https://ant.design/).
 
-In the project directory, you can run:
 
-### `yarn start`
+## Запуск проекта
+Для запуска проекта необходимо клонировать код `git clone` на локальную машину, установить зависимости `npm install` и запустить проект `npm run start`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Принцип работы 2-d планировщика
+После перехода на вкладку "Планировщик" на экране можно наблюдать 3 панели.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Первая панель (верхняя правая) доска 'Карта заведения'. Имеется возможность переключения отображения сетки. Перемещение элементов осуществляется зажатием левой кнопки мыши над элементом и его перетягиванием. Удаление элемента с доски происходит левой кнопкой мыши. Необходимо зажать ее над элементом и вынести его за пределы доски.
 
-### `yarn test`
+Вторая панель (верхняя левая) - это список элементов доступных для размещение на доске. Для добавления элемента на доску необходимо нажать левой кнопкой мыши на элементе, и он появится на первой панели.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+На нижней левой панели распологаются 2 кнопки "Export" - для сохранения готового плана в локальное хранилище и "Import" - для добавления сохраненного плана на доску
 
-### `yarn build`
+Ссылка на [GitHub Pages](https://igor-yakovlev.github.io/hammer-app/app/main/dashboard)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Планы по развитию проекта
+В дальнейшем планируется добавить возможность удаления всех элементов при помощи кнопки. Добавить возможность поворота элементов. Добавить возможность добавления элементов пользователям. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

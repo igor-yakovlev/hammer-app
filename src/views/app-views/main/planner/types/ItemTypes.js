@@ -10,12 +10,12 @@ export const ItemTypes = {
 };
 
 export const ItemPics = {
-  [ItemTypes.TABLE_4_CHAIRS]: "/img/furniture/4chairsTable.jpg",
-  [ItemTypes.TABLE_5_CHAIRS]: "/img/furniture/5chairsTable.jpg",
-  [ItemTypes.MIDDLE_SOFA]: "/img/furniture/middleSofa.jpg",
-  [ItemTypes.LEFT_SOFA]: "/img/furniture/leftSofa.jpg",
-  [ItemTypes.PLANT_1]: "/img/furniture/plant1.jpg",
-  [ItemTypes.PLANT_2]: "/img/furniture/plant2.jpg",
-  [ItemTypes.PLANT_3]: "/img/furniture/plant3.jpg",
-  [ItemTypes.PLANT_4]: "/img/furniture/plant4.jpg",
+  [ItemTypes.TABLE_4_CHAIRS]: "/hammer-app/img/furniture/4chairsTable.jpg",
+  [ItemTypes.TABLE_5_CHAIRS]: "/hammer-app/img/furniture/5chairsTable.jpg",
+  [ItemTypes.MIDDLE_SOFA]: "/hammer-app/img/furniture/middleSofa.jpg",
+  [ItemTypes.LEFT_SOFA]: "/hammer-app/img/furniture/leftSofa.jpg",
+  [ItemTypes.PLANT_1]: "/hammer-app/img/furniture/plant1.jpg",
+  [ItemTypes.PLANT_2]: "/hammer-app/img/furniture/plant2.jpg",
+  [ItemTypes.PLANT_3]: "/hammer-app/img/furniture/plant3.jpg",
+  [ItemTypes.PLANT_4]: "/hammer-app/img/furniture/plant4.jpg",
 };

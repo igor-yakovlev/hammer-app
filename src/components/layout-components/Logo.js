@@ -27,15 +27,15 @@ const getLogo = (props) => {
   const { navCollapsed, logoType } = props;
   if(logoType === 'light') {
     if(navCollapsed) {
-      return '/img/logo-sm-white.png'
+      return '/hammer-app/img/logo-sm-white.png'
     }
-    return '/img/logo-white.png'
+    return '/hammer-app/img/logo-white.png'
   }
 
   if (navCollapsed) {
-    return '/img/logo-sm.png'
+    return '/hammer-app/img/logo-sm.png'
   }
-  return '/img/logo.png'
+  return '/hammer-app/img/logo.png'
 }
 
 const getLogoDisplay = (isMobile, mobileLogo) => {

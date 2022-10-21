@@ -18,7 +18,7 @@ const MapCard = () => {
       extra={<CustomSwitch onChange={handleChange} />}
       title={"Карта заведения"}
       headStyle={{ color: "white" }}
-      style={{ backgroundColor: "#131313", width: '690px', height: '500px' }}
+      style={{ backgroundColor: "#131313", width: '570px', height: '500px' }}
     >
       <DndProvider backend={HTML5Backend}>
         <Container checked={checked} />

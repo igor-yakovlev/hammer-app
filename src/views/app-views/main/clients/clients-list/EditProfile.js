@@ -8,7 +8,6 @@ import { withRouter } from "react-router";
 import Loading from '../../../../../components/shared-components/Loading';
 
 export class EditProfile extends Component {
-
 	avatarEndpoint = 'https://www.mocky.io/v2/5cc8019d300000980a055e76'
 
 	state= {
@@ -204,7 +203,7 @@ export class EditProfile extends Component {
 										</Form.Item>
 									</Col>
 								</Row>
-								<Button type="primary" htmlType="submit">
+								<Button thammer-appype="primary" htmlType="submit">
 									Save Change
 								</Button>
 							</Col>

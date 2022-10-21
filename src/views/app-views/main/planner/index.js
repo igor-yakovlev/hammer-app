@@ -44,7 +44,7 @@ const Planner = ({ addItem, importItems, planner }) => {
     <div>
       <DndProvider backend={HTML5Backend}>
         <Row gutter={25}>
-          <Col lg={12}>
+          <Col md={24} lg={12}>
             <Card
               style={{ borderRadius: "10px" }}
               tabList={tabList}
@@ -54,13 +54,13 @@ const Planner = ({ addItem, importItems, planner }) => {
               {contentList(handleAddItem)[activeTabKey]}
             </Card>
             <Card>
-              <Space lg={8}>
+              <Space>
                 <CustomFileInput onChange={handleImport} />
                 <Button onClick={handleDownload}>Export</Button>
               </Space>
             </Card>
           </Col>
-          <Col lg={12}>
+          <Col md={24} lg={12}>
             <MapCard />
           </Col>
         </Row>
