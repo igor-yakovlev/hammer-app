@@ -1,0 +1,1 @@
+{"version":3,"sources":["views/app-views/main/banners/index.js"],"names":["Banners"],"mappings":"0HAUeA,UARC,WACf,OACC","file":"static/js/20.309b7d2e.chunk.js","sourcesContent":["import React from 'react'\r\n\r\nconst Banners = () => {\r\n\treturn (\r\n\t\t<div>\r\n\t\t\tBanners component works!\r\n\t\t</div>\r\n\t)\r\n}\r\n\r\nexport default Banners\r\n"],"sourceRoot":""}

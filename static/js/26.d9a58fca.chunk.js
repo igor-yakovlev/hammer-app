@@ -1,0 +1,2 @@
+(this.webpackJsonpemilus=this.webpackJsonpemilus||[]).push([[26],{545:function(e,s,n){"use strict";n.r(s);var t=n(2);n(0);s.default=function(){return Object(t.jsx)("div",{children:"Geozones component works!"})}}}]);
+//# sourceMappingURL=26.d9a58fca.chunk.js.map
